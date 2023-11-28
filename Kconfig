@@ -1,0 +1,15 @@
+menu "Netatmo API"
+
+config NETATMO_API_KEY
+    string "client api"
+    default "clientapi"
+	help
+	client api
+
+config NETATMO_SECRET_API
+	string "client secret"
+	default "secret"
+	help
+ 	client secret
+
+endmenu
