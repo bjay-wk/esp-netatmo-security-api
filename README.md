@@ -6,11 +6,12 @@ I have no relation with the netatmo company.
 
 ## Install
 
+In the file `src/idf_component.yml` add:
 ```sh
-    mkdir components
-    cd components
-    git submodule add <gitrepo>
+    esp-netatmo-security-api:
+        git: https://github.com/bjay-wk/esp-netatmo-security-api.git
 ```
+
 then in idf_component_register in the file CMakeLists.txt you will add
 
 ```
@@ -24,7 +25,7 @@ if you are using platform io you should add this to platform.ini
 ```ini
 [env]
 board_build.embed_txtfiles =
-	components/esp-netatmo-security-api/src/gdig2.crt.pem
+	managed_components/esp-netatmo-security-api/src/gdig2.crt.pem
 ```
 
 ## Information
